@@ -5,7 +5,7 @@ import 'dotenv/config'
 // استخراج الدالة بدون اعطائها اسم
 export default fp(async (fastify) => {
   fastify.register(Postgres, {
-    connectionString: process.env.LOCAL, 
+    connectionString: process.env.DB, 
     ssl:false,
     // ssl: {
     //   rejectUnauthorized: false}

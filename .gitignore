@@ -75,3 +75,5 @@ temp/
 postgres
 test/
 pnpm-lock.yaml
+.vercel
+.env*.local

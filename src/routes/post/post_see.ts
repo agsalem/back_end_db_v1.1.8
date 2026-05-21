@@ -14,7 +14,7 @@ const posts: FastifyPluginAsync = async (fastify): Promise<void> => {
          return reply.code(201).send({ post: posts.rows, comment: com.rows })
          // 
       } catch (err) {
-         console.error(err)
+         // console.error(err)
          return reply.code(500).send({ "Error": "Internal Server Error" });
 
       }

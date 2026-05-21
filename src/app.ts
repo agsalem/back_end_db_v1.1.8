@@ -26,6 +26,9 @@ const app: FastifyPluginAsync<AppOptions> = async (
   // This loads all plugins defined in routes
   // define your routes in one of these
   // eslint-disable-next-line no-void
+  void fastify.register(AutoLoad,{
+    dir:join(__dirname,'routes')
+  })
   void fastify.register(AutoLoad, {
     dir: join(__dirname, 'routes','post'),
     options: opts
@@ -35,9 +38,10 @@ const app: FastifyPluginAsync<AppOptions> = async (
     options: opts
   })
   
-  fastify.ready(() => {
-  console.log(fastify.printRoutes())
-})
+//   fastify.ready(() => {
+//   console.log(fastify.printRoutes())
+// })
+console.clear()
 }
 export default app
 export { app, options }
